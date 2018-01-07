@@ -93,7 +93,13 @@ namespace _Homework
             //TODO:Remove student from course
 
             //remove student from 'coursetostudent'
-
+            foreach (CourseToStudent cs in courseToStudents)
+            {
+                if (cs.student.sid == students[studentIdx].sid)
+                {
+                    courseToStudents.RemoveAt(studentIdx);
+                }
+            }
             //remove student from 'students'
             students.RemoveAt(studentIdx);
 		}
